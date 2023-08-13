@@ -16,7 +16,7 @@ def getBlog(db:Session= Depends(get_db)):
     result= blog_service.getAllBlogs(db)
     return result
 
-@router.get('/{id}', status_code= status.HTTP_200_OK)
+@router.get('/{id}', status_code= status.HTTP_200_OK, response_model= BlogResponse)
 def getBlog(id: str, db:Session= Depends(get_db)):
     result= blog_service.getBlogById(id, db)
     return result
