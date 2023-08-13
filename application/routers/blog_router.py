@@ -10,3 +10,4 @@ def getBlog():
     return {
         'data': 'fetching all blogs'
     }
+
